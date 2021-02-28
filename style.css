@@ -1,0 +1,347 @@
+body {
+    max-width: 1500px;
+    margin: auto;
+    font-family: 'hk_groteskbold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+    background-color: var(--fivh-lighter);
+}
+
+:root {
+    --food: #e06666;
+    --food-light: #ea9999;
+    --food-st: #ea999999;
+    --bike: #f6b26b;
+    --bike-light: #f9cb9c;
+    --bike-st: #f9cb9c99;
+    --clothes: #93c47d;
+    --clothes-light: #b6d7a8;
+    --clothes-st: #b6d7a899;
+    --tools: #6d9eeb;
+    --tools-light: #a4c2f4;
+    --tools-st: #a4c2f499;
+    --sports: #c27ba0;
+    --sports-light: #d5a6bd;
+    --sports-st: #d5a6bd99;
+
+    --fivh: #F7941D;
+    --fivh-light: #FFBA43;
+    --fivh-lighter: #FFD15A;
+    --tabwidth: 400px;
+}
+
+a {
+    color: black;
+}
+
+#header {
+    width:100%;
+    float:left;
+    height: 150px;
+    overfow: visible;
+}
+
+#logo {
+    float:left;
+}
+
+#titlebanner {
+    position: relative;
+    left: 50;
+    min-width: 500px;
+    overlow: visible;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.title {
+    margin-bottom: 0px;
+    margin-top:20px;
+}
+
+#footer {
+    width:100%;
+    float:left;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#map {
+    width: 70%;
+    min-width: 600px;
+    height: 800px;
+    float: left;
+    z-index: 0;
+}
+
+#rightcol {
+    width: 30%;
+    height: 800px;
+    float: left;
+}
+
+.leaflet-popup-content {
+    font-size: 14px;
+}
+
+.marker-pin {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50% 50% 0;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -20px 0 0 -20px;
+}
+
+.marker-pin::after {
+    content: '';
+    width: 32px;
+    height: 32px;
+    margin: 4px 0 0 4px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.custom-div-icon i {
+    position: absolute;
+    width: 18px;
+    font-size: 18px;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#tablecont::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#tablecont {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    float: left;
+}
+
+#tableview {
+    width:100%;
+    border-collapse: collapse;
+}
+
+table tr.cat_row {
+    font-size:20px;
+    font-weight: bold;
+}
+
+table tr {
+    padding:10px;
+}
+
+table td.placename {
+    width: 90%;
+}
+
+table td {
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
+
+#showMenu {
+    display: none;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--fivh-light);
+    color: black;
+    padding: 30px 15px;
+    border: none;
+}
+
+.openbtn:hover              { background-color: var(--fivh);          }
+
+table tr.food td            { background-color: var(--food-light);    }
+table tr.food:hover td      { background-color: var(--food);          }
+table tr.bike td            { background-color: var(--bike-light);    }
+table tr.bike:hover td      { background-color: var(--bike);          }
+table tr.clothes td         { background-color: var(--clothes-light); }
+table tr.clothes:hover td   { background-color: var(--clothes);       }
+table tr.tools td           { background-color: var(--tools-light);   }
+table tr.tools:hover td     { background-color: var(--tools);         }
+table tr.sports td          { background-color: var(--sports-light);  }
+table tr.sports:hover td    { background-color: var(--sports);        }
+
+.marker-cluster-food        { background-color: var(--food-st);    }
+.marker-cluster-food div    { background-color: var(--food);       }
+.marker-cluster-bike        { background-color: var(--bike-st);    }
+.marker-cluster-bike div    { background-color: var(--bike);       }
+.marker-cluster-clothes     { background-color: var(--clothes-st); }
+.marker-cluster-clothes div { background-color: var(--clothes);    }
+.marker-cluster-tools       { background-color: var(--tools-st);   }
+.marker-cluster-tools div   { background-color: var(--tools);      }
+.marker-cluster-sports      { background-color: var(--sports-st);  }
+.marker-cluster-sports div  { background-color: var(--sports);     }
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'hk_groteskbold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+}
+
+.marker-cluster span {
+    line-height: 30px;
+}
+
+
+/* for mobile */
+@media screen and (max-device-width: 1000px) {
+    :root {
+	--tabwidth: 700px;
+    }
+    #map {
+	height: 90%;
+	width: 100%;
+    }
+    .leaflet-popup-content {
+	font-size: 24px;
+    }
+    .marker-pin {
+	width: 80px;
+	height: 80px;
+	margin: -40px 0 0 -40px;
+    }
+    .marker-pin::after {
+	width: 64px;
+	height: 64px;
+	margin: 8px 0 0 8px;
+    }
+    .custom-div-icon i {
+	position: absolute;
+	width: 32px;
+	font-size: 32px;
+	left: -5px;
+	right: 0;
+	margin: 0px;
+	text-align: center;
+    }
+    .tbl_ctl {
+	padding: 10px 10px;
+	font-size: 48px;
+    }
+    table tr.cat_row {
+	height: 100px;
+	padding: 10px 10px;
+	font-size:32px;
+	font-weight: bold;
+    }
+    .place {
+	font-size: 30px;
+    }
+    .material-icons {
+	font-size: 32px;
+    }
+
+    .openbtn {
+	font-size: 20px;
+	cursor: pointer;
+	background-color: var(--fivh-light);
+	color: black;
+	padding: 60px 30px;
+	border: none;
+    }
+
+    .marker-cluster {
+	background-clip: padding-box;
+	border-radius: 40px;
+	width: 80px !important;
+	height: 80px !important;
+	margin-left: -40px !important;
+	margin-top: -40px !important;
+    }
+
+    .marker-cluster div {
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+	text-align: center;
+	border-radius: 30px;
+	font-family: 'hk_groteskbold', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
+	font-size: 24px;
+    }
+
+    .marker-cluster span {
+	line-height: 60px;
+    }
+
+    h1 {
+	font-size: 46px;
+    }
+
+    h3 {
+	font-size: 22px;
+    }
+
+    #footer {
+	font-size: 18px;
+    }
+
+    .title {
+	margin-bottom: 0px;
+	margin-top:13px;
+    }
+} 
+
+/* mobile & resize */
+@media screen and (max-width: 1000px) {
+    #map {
+	width: 100%;
+    }
+
+    #rightcol {
+	top: 50%;
+	width: 0;
+	height: 0;
+    }
+
+    #tablecont {
+	height: 80%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 150px;
+	right: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+    }
+
+    #showMenu {
+	position: fixed;
+	display: block;
+	height: 100%;
+	top: 150px;
+	right: 0;
+	transition: 0.5s;
+    }
+}

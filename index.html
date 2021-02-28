@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Bærekraftig Oslo-guide</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./MarkerCluster.css"/>
+    <script src="./leaflet.markercluster.js"></script>
+    <link rel="icon"
+	  type="image/png"
+	  href="https://www.framtiden.no/favicon.ico">
+    <script src="./script.js"></script>
+  </head>
+  <body onload="init()">
+
+    <div id="header">
+      <div id="logo">
+	<img src="logo.png" alt="logo" height="150px;">
+      </div>
+      <div id="titlebanner">
+	<h1 class="title">Bærekraftig Oslo-guide</h1>
+	<h3 class="title">For å gjøre det enklere for deg å finne aktører i Oslo som driver bærekraftig</h3>
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="map"></div>
+      <div id="rightcol">
+	<div id="tablecont">
+	  <table id="tableview">
+	  </table>
+	</div>
+      </div>
+
+      <div id="showMenu">
+	<button class="openbtn" onclick="toggleNav()">
+	  <i id="fold_menu" class='material-icons'>navigate_before</i>
+	</button>
+      </div>
+    </div>
+
+    <div id="footer">
+      <p>Dette er ikke en uttømmende liste. Vi håper at kartet kan bli komplett og oppdatert med hjelp fra dere der ute!</p>
+      <p>Har du tips til en ny bærekraftig aktør eller andre tilbakemeldinger? Meld inn forslag i <a target="_blank" href="https://forms.gle/9ACyKUkiVXy38Zrp6">dette skjemaet</a>.</p>
+      <p>Vil du bidra teknisk til denne nettsiden? Kildekoden er <a target="_blank" href="https://github.com/fivh-oslo/guide">åpen</a>.</p>
+      <p>Finn oss på <a target="_blank" href="https://www.facebook.com/framtidenivhoslo">Facebook</a> / <a target="_blank" href="https://www.instagram.com/framtidenivarehenderoslo/">Instagram</a> / <a href="mailto:oslo@framtiden.no">Epost</a></p>
+    </div>
+
+  </body>
+</html>
