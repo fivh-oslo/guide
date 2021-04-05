@@ -582,6 +582,23 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Vaquera Verde",
+        "category": "food",
+        "website": "https://www.vaqueraverde.no/",
+        "address": "Waldemar Thranes gate 8",
+        "city": "0171 Oslo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.73937,
+          59.9234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Vegan Loving Hut",
         "category": "food",
         "website": "http://veganlovinghut.no/",
