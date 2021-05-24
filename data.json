@@ -1092,6 +1092,23 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Bitraf",
+        "category": "tools",
+        "website": "https://bitraf.no/",
+        "address": "Pløens gate 4",
+        "city": "0181 Oslo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.74903,
+          59.91407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Clas Ohlson verktøyutlån Alna Senter",
         "category": "tools",
         "website": "https://www.uteleiehosclas.no/",
